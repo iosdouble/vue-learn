@@ -2,12 +2,18 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <button type="button" class="btn btn-primary" v-on:click="getPdf()">导出PDF</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      htmlTitle: '页面导出PDF文件名'
+    }
+  }
 }
 </script>
 
